@@ -7,16 +7,16 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PropertyInjectedControllerTest {
-    private  PropertyInjectController propertyInjectController;
+    private PropertyInjectedController propertyInjectedController;
 
     @Before
     public void setUp() throws Exception {
-        this.propertyInjectController = new PropertyInjectController();
-        this.propertyInjectController.greetingService = new GreetingServiceImpl();
+        this.propertyInjectedController = new PropertyInjectedController();
+        this.propertyInjectedController.greetingService = new GreetingServiceImpl();
     }
 
     @Test
     public void testGreeting() throws Exception {
-        assertEquals(GreetingServiceImpl.HELLO, propertyInjectController.sayHello());
+        assertEquals(GreetingServiceImpl.HELLO, propertyInjectedController.sayHello());
     }
 }
