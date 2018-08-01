@@ -1,6 +1,9 @@
 package com.mikelzuzu;
 
+import com.mikelzuzu.controllers.ConstructorInjectedController;
 import com.mikelzuzu.controllers.MyController;
+import com.mikelzuzu.controllers.PropertyInjectedController;
+import com.mikelzuzu.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,5 +20,13 @@ public class DiDemoApplication {
 		String print = controller.hello();
 
 		System.out.println(print);
+
+		System.out.println("Using controllers");
+
+		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+
+		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
 }

@@ -1,12 +1,14 @@
 package com.mikelzuzu.controllers;
 
 import com.mikelzuzu.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
-public class ContructorInjectedController {
+@Controller
+public class ConstructorInjectedController {
 
     private GreetingService greetingService;
 
-    public ContructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
