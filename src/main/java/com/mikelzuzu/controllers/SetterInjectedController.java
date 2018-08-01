@@ -2,7 +2,7 @@ package com.mikelzuzu.controllers;
 
 import com.mikelzuzu.services.GreetingService;
 
-public class SetterInjecterController {
+public class SetterInjectedController {
     private GreetingService greetingService;
 
     public String sayHello() {
