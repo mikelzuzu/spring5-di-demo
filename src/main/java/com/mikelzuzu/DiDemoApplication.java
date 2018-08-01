@@ -17,11 +17,12 @@ public class DiDemoApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		String print = controller.hello();
+		//String print = controller.hello();
 
-		System.out.println(print);
+		//System.out.println(print);
 
 		System.out.println("Using controllers");
+		System.out.println(controller.hello());
 
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 
