@@ -7,8 +7,11 @@ import com.mikelzuzu.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+//That annotation scan all components inside that package. Now services are out of it so we need to manually scan for them
+@ComponentScan(basePackages = {"com.services", "com.mikelzuzu"})
 public class DiDemoApplication {
 
 	public static void main(String[] args) {

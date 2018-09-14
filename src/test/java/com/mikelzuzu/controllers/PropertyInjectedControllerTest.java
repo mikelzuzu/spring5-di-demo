@@ -1,6 +1,6 @@
 package com.mikelzuzu.controllers;
 
-import com.mikelzuzu.services.GreetingServiceImpl;
+import com.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 
